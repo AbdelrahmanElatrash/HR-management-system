@@ -12,5 +12,11 @@ every home pages have header,footer and main part
 we create a constructor for employee with prototype to calculate salery and render the employee information on the home pages
 
 
+### secod lab event
+in this lab we make event listener for a HTML form to get employees information from user and disply the data  on the page ,
+make a style for the data that we render it and working with DOM 
+after this our web page can display dynamic data for our employees constructor
+
+
 
 

@@ -15,13 +15,49 @@
                <nav>
                 <ul>
                     <li><a href="./index.html">home</a></li>
-                    <li><a href="./accounting.html">about</a></li>
+                    <li><a href="./accounting.html">accounting</a></li>
                 </ul>
                </nav>
             </div>
     </div>
     </header>
     <main>
+        <form id="employee_data">
+            <fieldset>
+                <legend>add employees information</legend>
+                
+                <label for="fullName">Full name:</label><br>
+                <input type="text" id="fullName" name="fullName" >
+                <br><br>
+                <label for="department">Department:</label><br>
+                <select id="department" name="department">
+                    <option value="Administration">Administration</option>
+                    <option value="Marketing">Marketing</option>
+                    <option value="Development">Development</option>
+                    <option value="Finance">Finance</option>
+                </select>
+                <br><br>
+                <label for="level">Level:</label><br>
+                <select id="level" name="level">
+                    <option value="Junior">Junior</option>
+                    <option value="Mid-Senior">Mid-Senior</option>
+                    <option value="Senior">Senior</option>
+                </select>
+                <br><br>
+                <label for="imgurl">ImgURL:</label><br>
+                <input type="text" id="imgurl" name="imgurl" >
+                <br><br>
+                <input type="submit" name="add drink" value="add new employee">
+                <br><br>
+    
+            </fieldset>
+        </form>
+
+        <section>
+            <div id="employees_contener">
+
+            </div>
+        </section>
 
     </main>
     <footer>
