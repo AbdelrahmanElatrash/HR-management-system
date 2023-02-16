@@ -17,6 +17,9 @@ in this lab we make event listener for a HTML form to get employees information 
 make a style for the data that we render it and working with DOM 
 after this our web page can display dynamic data for our employees constructor
 
-
+### therd lab
+working with localstorage and json
+now we save data in locall storage and render it to the pages
+create rndre for accounting page
 
 
