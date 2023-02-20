@@ -5,7 +5,7 @@ let financeNumber = 0;
 
 let adminSalary = 0;
 let marketingSalary = 0;
-let departmentSalary = 0;
+let developmentSalary = 0;
 let financeSalary = 0;
 
 
@@ -85,35 +85,65 @@ const render = (arr) => {
     }
 
     let allEmployees=adminNumber+marketingNumber+developmentNumber+financeNumber;
-    let totalSalary=adminSalary+marketingSalary+departmentSalary+financeSalary;
-    let AverageSalary=departmentSalary / developmentNumber+adminSalary/adminNumber+marketingSalary /marketingNumber+financeSalary/financeNumber
-
+    let totalSalary=adminSalary+marketingSalary+developmentSalary+financeSalary;
+    let averageSalary= ((developmentNumber==0)?0:developmentSalary/developmentNumber)+
+                        ((adminNumber==0)?0:adminSalary/adminNumber)+
+                        ((marketingNumber==0)?0:marketingSalary/marketingNumber)+
+                        ((financeNumber==0)?0:financeSalary/financeNumber) ;
+    
+    
+    console.log(developmentSalary)
+    console.log(developmentNumber)
+    console.log(0/1)
 
     administration.innerHTML = ` <td> administration</td>
                                 <td>${adminNumber}</td>
-                                <td>${adminSalary/adminNumber}
+                                <td>${(adminNumber==0) ? 0 : adminSalary/adminNumber}  
                                 <td> ${adminSalary}`;
 
     marketing.innerHTML=`<td> marketing</td>
                            <td>${marketingNumber}</td>
-                           <td>${marketingSalary /marketingNumber}</td>
+                           <td>${(marketingNumber==0)?0:marketingSalary /marketingNumber}</td>
                            <td> ${marketingSalary}</td>`;
 
     development.innerHTML = `<td> development</td>
                             <td>${developmentNumber}</td>
-                            <td>${departmentSalary / developmentNumber}</td>
-                             <td> ${departmentSalary}</td>`;
+                            <td>${(developmentNumber==0)?0:developmentSalary / developmentNumber}</td>
+                             <td> ${developmentSalary}</td>`;
 
     finance.innerHTML=`<td> finance</td >
                         <td>${financeNumber}</td>
-                        <td>${financeSalary/financeNumber}</td>
+                        <td>${(financeNumber==0)?0:financeSalary/financeNumber}</td>
                         <td> ${financeSalary}</td>`;
 
-    footer.innerHTML=`<tr>
+    footer.innerHTML=` <tr>
+                       <th></th>
+                       <th>total employees</th>
+                       <th>average salary for all employees</th>
+                       <th>total salary for all employees</th>
+                       </tr>
+                       <tr>
                        <td> collection </td>
                        <td>${allEmployees}</td>
-                       <td>${AverageSalary}</td>
-                       <td>${totalSalary}</td>`
+                       <td>${averageSalary}</td>
+                       <td>${totalSalary}</td>
+                       </tr>`
+
+                       
+    // footer.innerHTML=`<tr>
+    //                   <th>total employees</th>
+    //                   <td>${allEmployees}</td>
+    //                   </tr>
+    //                   <tr>
+    //                   <th>average salary for all employees</th>
+    //                   <td>${averageSalary}</td>
+    //                   </tr>
+    //                   <tr>
+    //                   <th>total salary for all employees</th>
+    //                   <td>${totalSalary}</td>
+    //                   </tr>`
+   
 }
 
 render(arrOfEmployees) ;
+
