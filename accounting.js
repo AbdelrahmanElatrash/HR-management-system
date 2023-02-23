@@ -73,7 +73,7 @@ const render = (arr) => {
                     break;
                 case "Development":
                     developmentNumber += 1;
-                    departmentSalary += obj.salary;
+                    developmentSalary += obj.salary;
                     break;
                 case "Finance":
                     financeNumber += 1
@@ -92,10 +92,7 @@ const render = (arr) => {
                         ((financeNumber==0)?0:financeSalary/financeNumber) ;
     
     
-    console.log(developmentSalary)
-    console.log(developmentNumber)
-    console.log(0/1)
-
+    
     administration.innerHTML = ` <td> administration</td>
                                 <td>${adminNumber}</td>
                                 <td>${(adminNumber==0) ? 0 : adminSalary/adminNumber}  
